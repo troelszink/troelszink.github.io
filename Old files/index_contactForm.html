@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Troels Zink Kristensen</title>
+<link href="CSS/TZK_external.css" rel="stylesheet" type="text/css">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="jQuery/jquery-3.4.1.js"></script>
+<script src="jQuery/contact.js"></script>
+
+<script>
+$(document).ready(function() 
+{
+
+    // Indicates that "Home" is the startup-page (is marked with red at the link)
+    $('#id_home').addClass('active');
+
+    $(".link").click(function(e) 
+    {
+        e.preventDefault();
+        $('.content div').fadeOut(100);
+        $('#' + $(this).data('rel')).fadeIn(300);
+
+        // Remove class="active" from all 5 links
+        $(this).siblings().removeClass('active');
+        // Add class="active" to this specific link
+        $(this).addClass('active');
+    }); // end click
+
+}); // end ready
+</script>
+</head>
+<body>
+    <div id="page-container">
+    <div class="overallMenu">
+        <div class="menu">
+            <a class="link" id="id_home" href="#home" data-rel="home">Home</a>
+            <a class="link" href="#aboutMe" data-rel="aboutMe">About me</a>
+            <a class="link" href="#cv" data-rel="cv">CV</a>
+            <a class="link" href="#projects" data-rel="projects">Projects</a>
+            <a class="link" href="#contact" data-rel="contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <!-- Add font awesome icons -->
+        <a href="https://www.facebook.com/Troelszink" target="_blank" class="fa fa-facebook"></a>
+        <a href="https://www.linkedin.com/in/troels-zink-kristensen-a35897149/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="mailto:t.zink.business@outlook.com" target="_blank" class="fa fa-envelope"></a>
+        <a href="tel:61285832" target="_blank" class="fa fa-phone"></a>
+    </div>
+
+    <div id="content-wrapper">
+    <div class="content">
+        <div id="home">
+            <h1>Home</h1>
+            <div id="home_image">
+                <img src="Images\homeMig2.jpg">
+            </div>
+        </div>
+        <div id="aboutMe">
+            <h1>About Me</h1>
+        </div>
+        <div id="cv">
+            <h1>CV</h1>
+            <embed src="PDF\CV_TZK.pdf" width="100%" height="100%" />
+        </div>
+        <div id="projects">
+            <h1>Projects</h1>
+        </div>
+        <div id="contact">
+            <h1>Contact</h1>
+            <form action="contact.php" method="post" id="contact_form">
+                <input class="contact_name" type="text" name="name" id="name" placeholder="Name" />
+                <input class="contact_email" type="email" name="email" id="email" placeholder="Email" />
+                <input class="contact_subject" type="text" name="subject" id="subject" placeholder="Subject" />
+                <textarea class="contact_message" name="message" id="message" placeholder="Write your message..."></textarea>
+                <button class="submit" type="submit" id="send_message" style="height: 43px;">Send Message</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <div id="footerDiv">
+            <p>Copyright 2019, Troels Zink Kristensen</p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

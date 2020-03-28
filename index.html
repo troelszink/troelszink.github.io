@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Troels Zink Kristensen</title>
+<link href="CSS/TZK_external.css" rel="stylesheet" type="text/css">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="57x57" href="Images/Favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="Images/Favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="Images/Favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="Images/Favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="Images/Favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="Images/Favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="Images/Favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="Images/Favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="Images/Favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="Images/Favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Images/Favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="Images/Favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Images/Favicon/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script src="jQuery/jquery-3.4.1.js"></script>
+<script src="jQuery/contact.js"></script>
+
+<script>
+$(document).ready(function() 
+{
+    // Indicates that "Home" is the startup-page (is marked with red at the link)
+    $('#id_home').addClass('active');
+    $("#home").show();
+
+    $(".link").click(function(e) 
+    {
+        e.preventDefault();
+        $('.content div').fadeOut(0);
+        $('#' + $(this).data('rel')).fadeIn(100);
+
+        // Remove class="active" from all 5 links
+        $(this).siblings().removeClass('active');
+        // Add class="active" to this specific link
+        $(this).addClass('active');
+    }); // end click
+
+}); // end ready
+</script>
+</head>
+<body>
+    <div class="overallMenu">
+        <div class="menu">
+            <a class="link" id="id_home" href="#home" data-rel="home">Home</a>
+            <a class="link" href="#aboutMe" data-rel="aboutMe">About me</a>
+            <a class="link" href="#cv" data-rel="cv">CV</a>
+            <a class="link" href="#projects" data-rel="projects">Projects</a>
+            <a class="link" href="#contact" data-rel="contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <!-- Add font awesome icons -->
+        <a href="https://www.facebook.com/Troelszink" target="_blank" class="fa fa-facebook"></a>
+        <a href="https://www.linkedin.com/in/troels-zink-kristensen-a35897149/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="mailto:t.zink.business@outlook.com" target="_blank" class="fa fa-envelope"></a>
+        <a href="tel:61285832" target="_blank" class="fa fa-phone"></a>
+    </div>
+
+    <div id="content-wrapper">
+    <div class="content">
+        <div id="home">
+            <h1>Home</h1>
+            <p>Welcome to my personal website!</p>
+            <p>My name is Troels Zink Kristensen, and I come from Denmark.</p>
+            <p>Feel free to navigate around my website to know me better.</p>
+        </div>
+        <div id="aboutMe">
+            <h1>About Me</h1>
+            <img src="Images\homeMig2.jpg">
+            <p>My name is Troels Zink Kristensen, and I am
+                currently 22 years old. I live in Odense but lived
+                in Varde Kommune in Western Jutland until
+                2017. I started working at 13 years old, and
+                since then I have worked most of the time,
+                except in recent years during my education. I
+                long for a job alongside my study.
+                I am currently studying Civil Engineering in
+                Robot Technology at University of Southern
+                Denmark in Odense.
+                I am dedicated and always meet on time. I give
+                all that I have during work, and often more
+                than that. I have never had any sick days.
+                A recommendation from my former boss can
+                be acquired at my LinkedIn-profile.</p>
+            <h3>Key features</h3>
+            <ul>
+                <li>Leadership</li>
+                <li>Working in groups</li>
+                <li>Independent</li>
+                <li>Healthy and fit</li>
+                <li>Technic</li>
+                <li>Socially strong</li>
+                <li>Western Jutlander</li>
+                <li>Studying Robot Technology</li>
+                <li>Longing for a job</li>
+              </ul>
+        </div>
+        <div id="cv">
+            <h1>CV</h1>
+            <embed src="PDF\CV_TZK.pdf" width="100%" height="100%" />
+        </div>
+        <div id="projects">
+            <h1>Projects</h1>
+            <h3>Projects during my Bachelor</h3>
+            <a class="fa fa-file" href="Files\Rapport_1sem.pdf" download target="_blank"></a>
+            <a class="fa fa-file" href="Files\Rapport_2sem.pdf" download target="_blank"></a>
+            <a class="fa fa-file" href="Files\Rapport_3sem.pdf" download target="_blank"></a>
+            <p><b>1st:</b> The Drawing Robot</p>
+            <p><b>2nd:</b> Pole Position</p>
+            <p><b>3rd:</b> SoundBox</p>
+
+            <a class="fa fa-file" href="Files\Rapport_4sem.pdf" download target="_blank"></a>
+            <a class="fa fa-file" href="Files\Rapport_5sem.pdf" download target="_blank"></a>
+            <a class="fa fa-file" href="" download target="_blank"></a>
+            <p><b>4th:</b> Control of Pan-Tilt System</p>
+            <p><b>5th:</b> Marble Finding Robot</p>
+            <p><b>6th:</b> Bachelor Project</p>
+        </div>
+        <div id="contact">
+            <h1>Contact</h1>
+            <a class="fa fa-male"></a>
+            <a class="fa fa-map-pin"></a>
+            <a class="fa fa-inbox"></a>
+            <a class="fa fa-phone-square"></a>
+
+            <p>Troels Zink Kristensen</p>
+            <p>Niels Bohrs Allé 23<br/>5230, Odense M</p>
+            <p>T.Zink.Business@outlook.com<br/>tkris17@student.sdu.dk</p>
+            <p>+45 61 28 58 32</p>
+
+            <h3>Shortcuts to come in contact with me</h3>
+
+            <a href="https://www.facebook.com/Troelszink" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.linkedin.com/in/troels-zink-kristensen-a35897149/" target="_blank" class="fa fa-linkedin"></a>
+            <a href="mailto:t.zink.business@outlook.com" target="_blank" class="fa fa-envelope"></a>
+            <a href="tel:61285832" target="_blank" class="fa fa-phone"></a>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <div id="footerDiv">
+            <a class="fa fa-copyright"></a>
+            <p>Copyright 2020, Troels Zink Kristensen. Last updated March 27th, 2020.</p>
+        </div>
+    </footer>
+</body>
+</html>
